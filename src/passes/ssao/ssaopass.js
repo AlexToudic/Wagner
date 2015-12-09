@@ -1,10 +1,9 @@
 'use strict';
 
 var THREE = require('three');
-var glslify = require('glslify');
 var Pass = require('../../Pass');
-var vertex = glslify('../../shaders/vertex/sao.glsl');
-var fragment = glslify('./sao-fs.glsl');
+var vertex = require('../../shaders/vertex/sao.glsl');
+var fragment = require('./sao-fs.glsl');
 var BlendPass = require('../blend/BlendPass');
 var FullBoxBlurPass = require('../box-blur/FullBoxBlurPass');
 var Composer = require('../../Composer');
@@ -14,7 +13,7 @@ function SSAO(options) {
   this.setShader(vertex, fragment);
 
 
- 
+
   this.blendPass = new BlendPass();
 
   this.blurPass = new FullBoxBlurPass(2);
@@ -59,22 +58,12 @@ SSAO.prototype.run = function(composer) {
 
       if( this.params.onlyOcclusion ) {
         composer.setSource( this.composer.output );
-      } else {    
+      } else {
         this.blendPass.params.mode = 4;
         this.blendPass.params.tInput2 = this.composer.output;
 
         composer.pass( this.blendPass );
       }
 
-   
+
 };
-
-
-
-
-
-
-
-
-
-

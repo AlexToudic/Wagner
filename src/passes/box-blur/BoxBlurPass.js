@@ -1,10 +1,9 @@
 'use strict';
 
 var THREE = require('three');
-var glslify = require('glslify');
 var Pass = require('../../Pass');
-var vertex = glslify('../../shaders/vertex/basic.glsl');
-var fragment = glslify('./box-blur-fs.glsl');
+var vertex = require('../../shaders/vertex/basic.glsl');
+var fragment = require('./box-blur-fs.glsl');
 
 function BoxBlurPass(deltaX, deltaY) {
   Pass.call(this);

@@ -1,9 +1,8 @@
 'use strict';
 
-var glslify = require('glslify');
 var Pass = require('../../Pass');
-var vertex = glslify('../../shaders/vertex/basic.glsl');
-var fragment = glslify('./fxaa-fs.glsl');
+var vertex = require('../../shaders/vertex/basic.glsl');
+var fragment = require('./fxaa-fs.glsl');
 
 function FXAAPass() {
   Pass.call(this);

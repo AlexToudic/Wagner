@@ -1,9 +1,8 @@
 'use strict';
 
-var glslify = require('glslify');
 var Pass = require('../../Pass');
-var vertex = glslify('../../shaders/vertex/basic.glsl');
-var fragment = glslify('./brightness-contrast-fs.glsl');
+var vertex = require('../../shaders/vertex/basic.glsl');
+var fragment = require('./brightness-contrast-fs.glsl');
 
 function BrightnessContrastPass(brightness, contrast) {
   Pass.call(this);
