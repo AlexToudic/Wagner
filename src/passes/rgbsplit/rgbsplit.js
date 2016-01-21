@@ -1,10 +1,9 @@
 'use strict';
 
 var THREE = require('three');
-var glslify = require('glslify');
 var Pass = require('../../Pass');
-var vertex = glslify('../../shaders/vertex/basic.glsl');
-var fragment = glslify('./rgbsplit-fs.glsl');
+var vertex = require('../../shaders/vertex/basic.glsl');
+var fragment = require('./rgbsplit-fs.glsl');
 
 function RGBSplit(options) {
   Pass.call(this);
@@ -21,6 +20,6 @@ RGBSplit.prototype.constructor = RGBSplit;
 RGBSplit.prototype.run = function(composer) {
 
   this.shader.uniforms.delta.value.copy( this.params.delta );
-  
+
   composer.pass(this.shader);
 };
