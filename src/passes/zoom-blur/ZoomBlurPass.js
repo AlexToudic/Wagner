@@ -1,10 +1,9 @@
 'use strict';
 
-var glslify = require('glslify');
 var THREE = require('three');
 var Pass = require('../../Pass');
-var vertex = glslify('../../shaders/vertex/basic.glsl');
-var fragment = glslify('./zoom-blur-fs.glsl');
+var vertex = require('../../shaders/vertex/basic.glsl');
+var fragment = require('./zoom-blur-fs.glsl');
 
 function ZoomBlurPass(options) {
   Pass.call(this);

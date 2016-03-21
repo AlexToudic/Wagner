@@ -1,4 +1,4 @@
-//  USAGE : 
+//  USAGE :
 //  https://gist.github.com/Samsy/7219c148e6cbd179883a
 
 //  Port by Samsy for Wagner from http://bkcore.com/blog/3d/webgl-three-js-volumetric-light-godrays.html
@@ -6,13 +6,12 @@
 'use strict';
 
 var THREE = require('three');
-var glslify = require('glslify');
 var Pass = require('../../Pass');
 
 var FullBoxBlurPass = require('../box-blur/FullBoxBlurPass');
 
-var vertex = glslify('../../shaders/vertex/basic.glsl');
-var fragment = glslify('./godray-fs.glsl');
+var vertex = require('../../shaders/vertex/basic.glsl');
+var fragment = require('./godray-fs.glsl');
 
 function Godray(options) {
 
@@ -55,7 +54,7 @@ Godray.prototype.run = function(composer) {
   this.shader.uniforms.fClamp.value = this.params.fClamp;
 
   this.blurPass.params.amount = this.params.blurAmount;
-  
+
   composer.pass(this.blurPass);
   composer.pass(this.blurPass);
 

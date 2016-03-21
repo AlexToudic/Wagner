@@ -1,21 +1,21 @@
 # wagner-common
 
-Fork of [spite/Wagner](http://github.com/spite/Wagner) in commonjs for browserify and glslify. The Passes are not all available yet i'm porting them as I need them, PR welcome (it's fairly easy to port).
+Fork of [superguigui/Wagner](https://github.com/superguigui/Wagner) in commonjs for webpack.
 
 [demo](http://superguigui.github.io/Wagner)
 
 ## Installation
 
 ```bash
-npm install @superguigui/wagner glslify three --save
+npm install @alex_toudic/wagner three --save
 ```
 
 ## Usage
 
 ```javascript
 var THREE = require('three');
-var WAGNER = require('@superguigui/wagner');
-var BloomPass = require('@superguigui/wagner/src/passes/bloom/MultiPassBloomPass');
+var WAGNER = require('@alex_toudic/wagner');
+var BloomPass = require('@alex_toudic/wagner/src/passes/bloom/MultiPassBloomPass');
 
 // ...
 

@@ -1,10 +1,9 @@
 'use strict';
 
 var THREE = require('three');
-var glslify = require('glslify');
 var Pass = require('../../Pass');
-var vertex = glslify('../../shaders/vertex/basic.glsl');
-var fragment = glslify('./noise-fs.glsl');
+var vertex = require('../../shaders/vertex/basic.glsl');
+var fragment = require('./noise-fs.glsl');
 
 function Noise(options) {
 
@@ -29,6 +28,6 @@ Noise.prototype.run = function(composer) {
 
   this.shader.uniforms.amount.value = this.params.amount;
   this.shader.uniforms.speed.value = this.params.speed;
-  
+
   composer.pass(this.shader);
 };

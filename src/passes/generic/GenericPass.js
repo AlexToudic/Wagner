@@ -1,9 +1,8 @@
 'use strict';
 
-var glslify = require('glslify');
 var Pass = require('../../Pass');
 
-var vertex = glslify('../../shaders/vertex/ortho.glsl');
+var vertex = require('../../shaders/vertex/ortho.glsl');
 
 function GenericPass(fragment) {
   Pass.call(this);

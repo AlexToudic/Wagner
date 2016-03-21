@@ -1,10 +1,9 @@
 'use strict';
 
 var THREE = require('three');
-var glslify = require('glslify');
 var Pass = require('../../Pass');
-var vertex = glslify('../../shaders/vertex/basic.glsl');
-var fragment = glslify('./lookup-fs.glsl');
+var vertex = require('../../shaders/vertex/basic.glsl');
+var fragment = require('./lookup-fs.glsl');
 
 function Lookup(options) {
 
@@ -22,6 +21,6 @@ Lookup.prototype.constructor = Lookup;
 Lookup.prototype.run = function(composer) {
 
   this.shader.uniforms.uLookup.value = this.params.uLookup;
-  
+
   composer.pass(this.shader);
 };
