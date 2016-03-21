@@ -1,6 +1,6 @@
 {
   "name": "@alex_toudic/wagner",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "description": "Fork of spite/Wagner in commonjs for webpack.",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "author": "Alex Toudic <alexandre.toudic@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "raf": "^2.0.4",
-    "three": "^0.74.0"
+    "raf": "^3.2.0",
+    "three": "^0.75.0"
   }
 }
