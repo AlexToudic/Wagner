@@ -1,6 +1,6 @@
 {
   "name": "@alex_toudic/wagner",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "description": "Fork of spite/Wagner in commonjs for webpack.",
   "main": "index.js",
   "scripts": {
